@@ -11,14 +11,6 @@ class MGR_Magazine_Section_Meta extends MGR_Meta {
 		);
 	}
 
-	function factory() {
-		if (!isset(self::$instance)) {
-			$classname = __CLASS__;
-			self::$instance = new $classname;
-		}
-		return self::$instance;
-	}
-
 	/**
 	 * Outputs the HTML for the field
 	 *

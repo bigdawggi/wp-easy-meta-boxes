@@ -11,15 +11,6 @@ class MGR_Subhead_Meta extends MGR_Meta_Field {
 		);
 	}
 
-	// This may be able to be moved up to parent using get_called_class();
-	function factory() {
-		if (!isset(self::$instance)) {
-			$classname = __CLASS__;
-			self::$instance = new $classname;
-		}
-		return self::$instance;
-	}
-
 	/**
 	 * Outputs the HTML for the field
 	 *

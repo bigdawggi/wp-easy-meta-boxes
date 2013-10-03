@@ -1,6 +1,7 @@
 # 0.2 (current dev)
 
 - Allow filtering of the meta box title
+- Allow removal of the factory method in the children of the abstract MGR_Meta_Field Class
 
 # 0.1
 
