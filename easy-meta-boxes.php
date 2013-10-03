@@ -12,7 +12,7 @@ Author URI: http://matthewgrichmond.com
 
 // Meta Boxes only need to hook in the admin.
 if (is_admin()) {
-	require_once './lib/class.mgr-custom-meta-box.php';
-	require_once './lib/class.mgr-meta-field.php';
+	require_once 'lib/class.mgr-custom-meta-box.php';
+	require_once 'lib/class.mgr-meta-field.php';
 	MGR_Custom_Meta_Box::factory()->add_actions();
 }
