@@ -30,7 +30,13 @@ class MGR_Custom_Meta_Box {
 		));
 		foreach ($types as $type) {
 			// @TODO allow custom names for meta boxes
-			add_meta_box('mgr_custom_meta', 'MGR Custom Meta', array($this, 'output_custom_meta_box'), $type, 'normal');
+			add_meta_box(
+				'mgr_custom_meta',
+				apply_filters('mgr_custom_meta_box_title', 'MGR Custom Meta', array('post_type' => $type)),
+				array($this, 'output_custom_meta_box'),
+				$type,
+				'normal'
+			);
 		}
 
 	}
