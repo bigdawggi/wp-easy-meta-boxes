@@ -12,6 +12,17 @@ abstract class MGR_Meta_Field {
 	}
 
 	/**
+	 * @return an instance of the called class
+	 */
+	function factory() {
+		$classname = get_called_class();
+		if (!isset($classname::$instance)) {
+			$classname::$instance = new $classname;
+		}
+		return $classname::$instance;
+	}
+
+	/**
 	 * Ensure our post types have the aim custom meta box available
 	 *
 	 * @param array $types
