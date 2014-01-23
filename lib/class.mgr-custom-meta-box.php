@@ -29,10 +29,9 @@ class MGR_Custom_Meta_Box {
 			'post',
 		));
 		foreach ($types as $type) {
-			// @TODO allow custom names for meta boxes
 			add_meta_box(
 				'mgr_custom_meta',
-				apply_filters('mgr_custom_meta_box_title', 'MGR Custom Meta', array('post_type' => $type)),
+				apply_filters('mgr_custom_meta_box_title__'.$type, 'MGR Custom Meta'),
 				array($this, 'output_custom_meta_box'),
 				$type,
 				'normal'
